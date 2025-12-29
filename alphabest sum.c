@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+    char ch;
+    printf("enter the letter");
+    scanf("%c",&ch);
+    if (ch>=65 && ch<=90){
+        printf("its an alphabet");
+    }
+    else if (ch>=97 && ch<=122){
+        printf("its alphabet");
+    } else{
+        printf("invalid the letter/n");
+    }
+    
+    return 0;
+}
