@@ -12,7 +12,6 @@ int main()
             strcpy(small,word);
             if(strlen(word)>strlen(large))
             strcpy(large,word);
-            
             j=0;
             if(s[i]=='\0')
             break;
