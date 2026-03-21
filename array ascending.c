@@ -8,7 +8,7 @@ int main() {
     }
     for(int i=0;i<size;i++){
        for (int j=0;j<i;j++){
-         a=arr[i]<arr[j+1];
+         a=arr[i]>arr[j+1];
        }
     }
     printf("%d",a);
