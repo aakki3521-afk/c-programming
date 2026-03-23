@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int wordCount = 0, len = 0, minLen = 100, maxLen = 0;
+    char smallestWord[20], largestWord[20];
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] == ' ' || str[i] == '\n') {
+            if (len > 0) {
+                wordCount++;
+                if (len < minLen) minLen = len;
+                if (len > maxLen) maxLen = len;
+                len = 0;
+            }
+        } else {
+            len++;
+        }
+    }
+
+    printf("Word count: %d\n", wordCount);
+    printf("Shortest word length: %d\n", minLen);
+    printf("Longest word length: %d\n", maxLen);
+
+    return 0;
+}
